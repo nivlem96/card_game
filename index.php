@@ -34,7 +34,6 @@ $stack = [];
 
 //building deck
 $deck    = buildDeck();
-echo "Deck unpacked<br>";
 
 //shuffle deck
 shuffle($deck);

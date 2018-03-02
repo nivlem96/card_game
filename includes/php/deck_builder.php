@@ -23,5 +23,6 @@ function buildDeck()
             array_push($deck,$card);
         }
     }
+    echo "Deck unpacked<br>";
     return $deck;
 }
