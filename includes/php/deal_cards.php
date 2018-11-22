@@ -10,7 +10,7 @@
 function dealCards(&$deck,&$player,&$stack,$amount=1)
 {
     $cards = 0;
-    $stackCardsIndex = count($stack);
+    $stackCardsIndex = count($stack)-1;
     $dealtCards = [];
 
     //check if deck is empty
@@ -21,8 +21,10 @@ function dealCards(&$deck,&$player,&$stack,$amount=1)
         array_splice($stack,$stackCardsIndex,1);
         $deck = $stack;
         shuffle($deck);
+        $stack=[];
         $stack[0]= $temporaryCard;
-        echo "shuffled deck<br>";
+        echo "shuffled stack into deck<br>";
+        echo "top card is " . $stack[0]['name'].$stack[0]['symbol'] . "<br>";
     }
 
     //take cards untill you you have the given amount
